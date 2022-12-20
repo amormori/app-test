@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <style type="text/css">
+        body,div,h2,p,audio{    margin:0;   padding:0;}
+        body{   font-family:'Poppins',sans-serif;   height:100vh;}
+        .wrapper{
+            display:flex;   justify-content:center; align-items:center;
+            user-select:none;/* auto(default), all(클릭으로 선택), none, text:글자선택가능 */
+            height:100%;
+            background: linear-gradient(0deg, rgba(34,195,93,1) 0%, rgba(253,223,45,1) 100%);
+        }
+        .play-body{
+            width:380px;    padding:25px 30px;
+            border-radius:15px;
+            background:#fff;
+            box-shadow:3px 4px 8px 0px rgba(0,0,0,0.2);
+        }
+        .m-top{     margin-bottom:8px;}
+        .m-top>h2{  font-size:30px;   font-weight:600;  color:#252525;
+            /* background: linear-gradient(0deg, rgba(34,195,93,1) 0%, rgba(253,223,45,1) 100%);
+            background-clip:text; -webkit-background-clip:text;   color:transparent; */
+        }
+        .m-img{
+            overflow:hidden;
+            width:260px;     height:260px;      margin:0px auto;   border-radius:15px;
+        }
+        .m-img>img{
+            width:100%;     height:100%;
+            object-fit:contain;
+            /* fill(비율유지X),contain(비율유지O/전체이미지),cover(비율유지O/가득채우기),none(크기조절X),scale-down(none, contain중 크기 작은 값) */
+            /* object-position:center bottom; */
+        }
+
+        .m-info{            font-size:20px;     margin:30px;        text-align:center;}
+        .m-info>.artist{    font-size:14px;     font-weight:300;    color:#999;}
+
+        .m-progress{        width:100%;         height:6px;         border-radius:3px;      background:#e0e0e0;}
+        .m-progress>.bar{   width:10%;          height:inherit;     border-radius:inherit;  background:rgba(121,20,119,1);}
+        .m-progress>.timer{ font-size:14px;     margin-top:5px;     display:flex;           justify-content:space-between;}
+
+        .m-control{         margin-top:40px;    display:flex;       justify-content:space-between;      align-items:center;}
+        .m-control span{    font-size:28px;
+            background: linear-gradient(0deg, rgba(121,20,119,1) 0%, rgba(253,45,45,1) 100%);
+            background-clip:text; -webkit-background-clip:text;   color:transparent;
+        }
+        .m-control>.play-pause{
+            display:flex;   justify-content:center;     align-items:center;
+            width:54px;     height:54px;    background:#ccc;    border-radius:27px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="play-body">
+            <div class="m-top">
+                <h2>Music Player</h2>
+            </div>
+            <div class="m-img">
+                <img src="images/album1.jpg" alt="앨범">
+            </div>
+            <div class="m-info">
+                <p class="name">Alone</p>
+                <p class="artist">Color Out</p>
+            </div>
+            <div class="m-progress">
+                <div class="bar"><audio id="main-audio" src="songs/Alone.mp3"></audio></div>
+                <div class="timer">
+                    <span class="current">0:00</span>
+                    <span class="duration">0:00</span>
+                </div>
+            </div>
+            <div class="m-control">
+                <span id="btn-repeat" class="material-icons">repeat</span>
+                <span id="btn-prev" class="material-icons">skip_previous</span>
+                <div class="play-pause">
+                    <span id="btn-play" class="material-icons">play_arrow</span>
+                </div>
+                <span id="btn-next" class="material-icons">skip_next</span>
+                <span id="btn-list" class="material-icons">queue_music</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
